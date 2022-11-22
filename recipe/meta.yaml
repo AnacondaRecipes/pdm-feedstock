@@ -58,9 +58,15 @@ test:
 
 about:
   home: https://pypi.org/project/pdm/
+  description: |
+    A modern Python package and dependency manager 
+    supporting the latest PEP standards.
   summary: Python Development Master
   license: MIT
   license_file: LICENSE
+  license_family: MIT
+  dev_url: https://pdm.fming.dev/latest/
+  doc_url: https://github.com/pdm-project/pdm/tree/main/docs/docs
 
 extra:
   recipe-maintainers:
