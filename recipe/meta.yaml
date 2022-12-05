@@ -58,10 +58,10 @@ test:
 
 about:
   home: https://pypi.org/project/pdm/
+  summary: Python Development Master
   description: |
     A modern Python package and dependency manager 
     supporting the latest PEP standards.
-  summary: Python Development Master
   license: MIT
   license_file: LICENSE
   license_family: MIT
