@@ -26,26 +26,23 @@ requirements:
     - wheel
   run:
     - cachecontrol >=0.12.11
-    - certifi >=2022.6.15
+    - certifi
     - requests-toolbelt
     - rich >=12.3.0
     - unearth >=0.6.0
     - virtualenv >=20
     - blinker
-    - findpython >=0.2.0
-    - importlib-metadata >=3.6
+    - findpython >=0.2.2
+    - importlib-metadata >=3.6  # [py<310]
     - python-installer <0.6,>=0.5.1
     - packaging >=20.9
     - pdm-pep517 <2.0.0,>=1.0.0
-    - pep517 >=0.11.0
-    - pip >=20.1
     - platformdirs
-    - python
     - python-dotenv >=0.15
-    - resolvelib <0.9,>=0.8
+    - resolvelib >=0.9,<0.10
     - shellingham >=1.3.2
     - tomli >=1.1.0  # [py<311]
-    - tomlkit <1,>=0.8.0
+    - tomlkit <1,>=0.11.1
     - typing-extensions  # [py<38]
 
 test:
