@@ -54,7 +54,7 @@ test:
     - pdm
   commands:
     - pip check
-    - pdm --python
+    # - pdm --python
   requires:
     - pip
 
