@@ -1,5 +1,5 @@
 {% set name = "pdm" %}
-{% set version = "2.2.1" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdm-{{ version }}.tar.gz
-  sha256: a861d47d57bc6ef9e99edb09abd620955a37b2835019b6a8918beea3b089a3b7
+  sha256: 68be6c9ee7f0afb1a324f65926f618521cbe899d3d557011d579d4ce2bfb47fd
 
 build:
   entry_points:
@@ -28,7 +28,7 @@ requirements:
     - wheel
   run:
     - cachecontrol >=0.12.11
-    - certifi >=2022.6.15
+    - certifi
     - requests-toolbelt
     - rich >=12.3.0
     - unearth >=0.6.0
@@ -41,12 +41,12 @@ requirements:
     - pdm-pep517 >=1.0
     - pep517 >=0.11.0
     - platformdirs
-    - python
     - python-dotenv >=0.15
-    - resolvelib <0.9,>=0.8
+    - pyproject-hooks
+    - resolvelib >=0.9,<0.10
     - shellingham >=1.3.2
     - tomli >=1.1.0  # [py<311]
-    - tomlkit <1,>=0.8.0
+    - tomlkit <1,>=0.11.1
     - typing-extensions  # [py<38]
 
 test:
