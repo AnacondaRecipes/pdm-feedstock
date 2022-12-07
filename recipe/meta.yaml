@@ -13,6 +13,8 @@ build:
   number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - pdm = pdm.core:main
 
 requirements:
   build:
@@ -21,7 +23,9 @@ requirements:
   host:
     - pip
     - python
-    - pdm-pep517 >=0.3.0
+    - pdm-pep517 >=1.0
+    - setuptools
+    - wheel
   run:
     - cachecontrol >=0.12.11
     - certifi >=2022.6.15
@@ -31,19 +35,18 @@ requirements:
     - virtualenv >=20
     - blinker
     - findpython >=0.2.0
-    - importlib-metadata >=3.6
+    - importlib-metadata >=3.6  # [py<310]
     - python-installer <0.6,>=0.5.1
     - packaging >=20.9
     - pdm-pep517 <2.0.0,>=1.0.0
     - pep517 >=0.11.0
-    - pip >=20.1
     - platformdirs
     - python
     - python-dotenv >=0.15
     - resolvelib <0.9,>=0.8
     - shellingham >=1.3.2
     - tomli >=1.1.0  # [py<311]
-    - tomlkit <1,>=0.8.0
+    - tomlkit <1,>=0.11.1
     - typing-extensions  # [py<38]
 
 test:
@@ -51,14 +54,21 @@ test:
     - pdm
   commands:
     - pip check
+    - pdm --version
   requires:
     - pip
 
 about:
-  home: https://pypi.org/project/pdm/
+  home: https://pdm.fming.dev/
   summary: Python Development Master
+  description: |
+    A modern Python package and dependency manager 
+    supporting the latest PEP standards.
   license: MIT
   license_file: LICENSE
+  license_family: MIT
+  dev_url: https://github.com/pdm-project/pdm
+  doc_url: https://pdm.fming.dev/
 
 extra:
   recipe-maintainers:
