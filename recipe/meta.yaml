@@ -71,6 +71,11 @@ about:
   doc_url: https://pdm.fming.dev/
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/49522
+    reason: Dependency for chainlit
+  recipe-maintainers:
+    - ianaobi
   recipe-maintainers:
     - xhochy
     - theAeon
